@@ -1,0 +1,104 @@
+﻿<Window x:Class="Анкета.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Анкета"
+        mc:Ignorable="d"
+        Title="Анкета принцессы" Height="610" Width="400"
+        MaxHeight="610"
+        MinHeight="600"
+        MaxWidth="400"
+        MinWidth="400">
+    <Grid
+        Background="LightPink"
+        ShowGridLines="True"
+        >
+        <StackPanel>
+            <TextBox x:Name="NameTextBox"
+                     GotFocus="TextBox_GotFocus"
+                     LostFocus="TextBox_LostFocus"
+                     Margin="10 90 160 20"/>
+        </StackPanel>
+        <Border BorderThickness="4" BorderBrush="Black" 
+                Margin="80 10 80 530"
+                >
+            <TextBlock Text="Создание анкеты"
+                       TextWrapping="Wrap"     
+                       FontSize="25"
+                       FontFamily="Comic Sans MS"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+
+            </TextBlock>            
+        </Border>
+        <WrapPanel x:Name="Interests"
+            Margin="10 130 200 300" >
+            <TextBlock Text="Мои увлечения" FontSize="20" x:Name="Interes"/>
+            <CheckBox Content="Смотреть мультики" FontSize="15"/>
+            <CheckBox Content="Помогать маме" FontSize="15"/>
+            <CheckBox Content="Выращивать цветы"
+                      FontSize="15" />
+            <CheckBox Content="Играть в куклы"
+                      FontSize="15" />
+        </WrapPanel>
+        <StackPanel x:Name="Pets"
+            Margin="10 240 100 190">
+            <TextBlock Text="Любимые питомцы"
+                       FontSize="20" 
+                       x:Name="Pets"/>
+            <RadioButton Content="Котики"
+                         GroupName="pets"
+                         FontSize="15" />
+            <RadioButton Content="Пёсики"
+                         GroupName="pets"
+                         FontSize="15" />
+            <RadioButton Content="Кролики"
+                         GroupName="pets"
+                         FontSize="15" />
+            <RadioButton Content="Другое"
+                         GroupName="pets"
+                         FontSize="15" />
+     </StackPanel>
+        <StackPanel x:Name="Interests"
+            Margin="10 360 70 0">
+            <TextBlock Text="Мой любимый мультфильм" FontSize="20" x:Name="cartoon"/>
+            <StackPanel/>
+            <TextBlock Text="Мой любимый 2D мультфильм"
+                       FontSize="17" />
+            <RadioButton Content="Красавица и чудовище"
+                         GroupName="cartoon2D"
+                         FontSize="15"/>
+            <RadioButton Content="Русалочка"
+                         GroupName="cartoo2Dn"
+                         FontSize="15" />
+            <RadioButton Content="Король лев"
+                         GroupName="cartoon2D"
+                         FontSize="15" />
+        </StackPanel>
+            <StackPanel>
+        <TextBlock Text="Мой любимый 3D мультфильм"
+                       FontSize="17" />
+            <RadioButton Content="Холодное сердце"
+                         GroupName="cartoon3D"
+                         FontSize="15" />
+            <RadioButton Content="София Прекрасная"
+                         GroupName="cartoon3D"
+                         FontSize="15" />
+            <RadioButton Content="Моана"
+                         GroupName="cartoon3D"
+                         FontSize="15" />
+           </StackPanel>
+    
+        
+        <Button Height="30" Width="100"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Content="Готово"
+                Background="LightGoldenrodYellow"
+                Margin="10"
+                Click="Button_Click"/>
+        
+    </Grid>
+</Window>
+    
